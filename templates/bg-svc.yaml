@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.bg-name }}"
+  labels:
+    app: "{{ .Values.bg-name }}"
+spec:
+  #loadBalancerIP: xx.xx.xx.xx
+  selector:
+    app: "{{ .Values.bg-name }}"
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+    name: api-svc

@@ -1,0 +1,7 @@
+deployment:
+  image: "xchillies/weatherapp"
+  tag: "latest"
+
+api-name: weather-api
+
+background-name: weather-background
